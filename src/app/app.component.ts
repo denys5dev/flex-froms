@@ -15,13 +15,16 @@ export class AppComponent {
   now = new Date();
   employees: Employee[] = [];
   simpleProducts: string[];
+  selectedItems: any;
+  selectedData: any;
+
 
   constructor(service: Service) {
     this.simpleProducts = service.getSimpleProducts();
     this.employees = service.getEmployees();
   }
 
-
+  // EXPAND COLLAPSE
   toggleRow(key) {
     var keys = this.getNodeKeys(this.treeList.instance.getRootNode());
     this.treeList.instance.beginUpdate();
@@ -39,5 +42,18 @@ export class AppComponent {
       keys = keys.concat(this.getNodeKeys(item));
     });
     return keys;
+  }
+
+  //SELECTION
+
+  onSelectionChanged(e) {
+    console.log("​AppComponent -> onSelectionChanged -> e", e)
+    this.selectedData = e.selectedRowsData;
+  }
+
+  onVaildate() {
+    this.selectedData.forEach(e => {
+      console.log(e)
+    })
   }
 }
