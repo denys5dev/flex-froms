@@ -1,0 +1,84 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    background-color: beige;
+    border-radius: 3px;
+    padding: 1em;
+
+    &--row {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    &--section {
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        max-width: 340px;
+        flex-grow: 1;
+    }
+    &--group {
+        display: flex;
+    }
+
+    &--label {
+        margin-right: 1em; 
+        padding: .5em 0;
+        flex: 1 0 13px;
+    }
+    &--control {
+        flex: 5; 
+        padding: .5em;
+        margin-bottom: 1em;
+    }
+}
+
+.tag {
+    max-height: 80px;
+    overflow: auto;
+    &-wrapper {
+        display: block;
+    width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.wrapper {
+    margin: 10px;
+}
+
+.color1 {
+    background-color: aquamarine;
+}
+
+.color2 {
+    background-color: pink;
+}
+
+.color3 {
+    background-color: aliceblue;
+}
+
+.color4 {
+    background-color: coral
+}

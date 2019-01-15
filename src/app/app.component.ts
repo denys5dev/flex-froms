@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Service } from './my-service.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'devex-request-forms';
+  now = new Date();
+  simpleProducts: string[];
+  constructor(service: Service) {
+    this.simpleProducts = service.getSimpleProducts();
+  }
 }
