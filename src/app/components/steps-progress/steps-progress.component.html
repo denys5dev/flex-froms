@@ -1,0 +1,9 @@
+<div class="wizard small row ng-cloak" ng-cloak>
+  <a *ngFor="let state of states; let i = index;" [ngClass]="{ 'current': state.isCurrent }" href="{{state.href}}">
+    <div class="badge" style="display:none;">
+      @*<div class="border"></div>
+      <div class="number">{{i + 1}}</div>*@
+    </div>
+    {{ state.name }}
+  </a>
+</div>
